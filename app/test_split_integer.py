@@ -1,5 +1,6 @@
 from app.split_integer import split_integer
 
+
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
     assert sum(split_integer(6, 2)) == 6
 
@@ -21,6 +22,7 @@ def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
     assert result.count(0) > 0
 
 
-def test_difference_between_maximum_and_minimum_should_be_at_most_one() -> None:
+def test_difference_between_maximum_and_minimum_should_be_at_most_one(
+) -> None:
     result = split_integer(11, 3)
     assert max(result) - min(result) <= 1
